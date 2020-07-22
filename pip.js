@@ -35,12 +35,7 @@ client.on('message', (message) => {
 });
 client.on('message', (message) => {
   if(message.content === 'hb!업타임') {
-    const embed = new MessageEmbed()
-    .setTitle('업타임')
-    .setColor(0xff0000)
-    // Set the main content of the embed
-    .setDescription(client.uptime);
-  message.channel.send(embed)
+  message.channel.send(client.uptime)
   }
 });
   client.login(token);

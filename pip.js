@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 client.on('message', (message) => {
   if(message.content === 'hb!핑') {
-    message.channel.send(`pong ${client.ping}`);
+    message.channel.send(`현재 빅스비시의 풍속은${client.ping}입니다`);
   }
 });
 client.on('message', (message) => {
@@ -35,14 +35,12 @@ client.on('message', (message) => {
 });
 client.on('message', (message) => {
   if(message.content === 'hb!업타임') {
-  const embed = new Discord.RichEmbed
-  .setTitle('업타임')
-  // Set the color of the embed
-  .setColor(0xff0000)
-  // Set the main content of the embed
-  .setDescription(`${client.uptime}초`);
-
- message.channel.send(embed);
+    let embed = new Discord.RichEmbed()
+    .setColor('#0099ff')
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .addField('업타임',`${client}`)
+    .setTimestamp()
+  message.channel.send(embed)
   }
 });
   client.login(token);

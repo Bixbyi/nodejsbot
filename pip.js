@@ -6,12 +6,12 @@ client.on('ready', () => {
   console.log(`로그인: ${client.pings}`);
 });
 client.on('message', (message) => {
-  if(message.content === '`핑') {
+  if(message.content === '*핑') {
     message.channel.send(`pong ${client.ping}`);
   }
 });
 client.on('message', (message) => {
-  if(message.content === '`주사위'){
+  if(message.content === '*주사위'){
     sans = Math.floor(Math.random() * 7);
   if(sans === 1) (
       message.channel.send(':game_die: 1')
@@ -32,21 +32,5 @@ client.on('message', (message) => {
     message.channel.send(':game_die: 3')
   )
   }
-});
-client.on('message', (message) => {
-if(message.content == '`정보'){;
-  let embed = new Discord.RichEmbed()
-    .setTitle('정보')
-    .setURL('http://www.naver.com')
-    .setAuthor('나긋해', img, 'http://www.naver.com')
-    .setThumbnail(message.author.avatar)
-    .addBlankField()
-    .addField('닉네임',message.author.username)
-    .addField('아이디', message.author.id, true)
-    .addBlankField()
-    .setTimestamp()
-    .setFooter()
-    message.channel.send(embed)
-}
 });
 client.login(token);

@@ -26,10 +26,10 @@ client.on('message', (message) => {
       message.channel.send(':game_die: 4')
   )
   if(sans === 5) (
-    message.channel.send(':game_die: 2')
+    message.channel.send(':game_die: 5')
   )
   if(sans === 6) (
-    message.channel.send(':game_die: 3')
+    message.channel.send(':game_die: 6')
   )
   }
 });

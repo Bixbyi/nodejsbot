@@ -38,7 +38,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
     .setColor('#0099ff')
     .setAuthor()
-    .addField('업타임',`${client}초입니다`)
+    .addField('업타임',`${client.uptime} 초입니다`)
     .setTimestamp()
   message.channel.send(embed)
   }

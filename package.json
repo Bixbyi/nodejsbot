@@ -1,0 +1,13 @@
+{
+  "name": "-y",
+  "version": "1.0.0",
+  "main": "pip.js",
+  "scripts": {
+    "s": "node pip.js"
+  },
+  "dependencies": {
+    "asyncio": "0.0.2",
+    "axios": "^0.19.2",
+    "discord.js": "^11.5.1"
+  }
+}

@@ -34,9 +34,9 @@ client.on('message', (message) => {
   }
 });
 client.on('message', (message) => {
-if(message.content == 'embed'){;
+if(message.content == '`정보'){;
   let embed = new Discord.RichEmbed()
-    .setTitle('타이틀')
+    .setTitle('정보')
     .setURL('http://www.naver.com')
     .setAuthor('나긋해', img, 'http://www.naver.com')
     .setThumbnail(message.author.avatar)
@@ -46,6 +46,7 @@ if(message.content == 'embed'){;
     .addBlankField()
     .setTimestamp()
     .setFooter()
+    message.channel.send(embed)
 }
 });
 client.login(token);

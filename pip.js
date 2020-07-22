@@ -41,8 +41,8 @@ client.on('message', (message) => {
   .setColor(0xff0000)
   // Set the main content of the embed
   .setDescription(`${client.uptime}초`);
-// Send the embed to the same channel as the message
-message.channel.send(embed);
+
+ message.channel.send(embed);
   }
 });
   client.login(token);

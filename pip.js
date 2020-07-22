@@ -6,12 +6,12 @@ client.on('ready', () => {
   console.log(`로그인: ${client.pings}`);
 });
 client.on('message', (message) => {
-  if(message.content === '*핑') {
+  if(message.content === 'hb!핑') {
     message.channel.send(`pong ${client.ping}`);
   }
 });
 client.on('message', (message) => {
-  if(message.content === '*주사위'){
+  if(message.content === 'hb!주사위'){
     sans = Math.floor(Math.random() * 7);
   if(sans === 1) (
       message.channel.send(':game_die: 1')
@@ -33,4 +33,14 @@ client.on('message', (message) => {
   )
   }
 });
-client.login(token);
+client.on('message', (message) => {
+  if(message.content === 'hb!업타임') {
+    const embed = new MessageEmbed()
+    .setTitle('업타임')
+    .setColor(0xff0000)
+    // Set the main content of the embed
+    .setDescription(client.uptime);
+  message.channel.send(embed)
+  }
+});
+  client.login(token);

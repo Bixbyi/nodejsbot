@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const { Cipher } = require('crypto');
 const asnycio = require('asyncio')
 const client = new Discord.Client();
 const token = process.env.token

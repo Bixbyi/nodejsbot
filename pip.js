@@ -35,7 +35,14 @@ client.on('message', (message) => {
 });
 client.on('message', (message) => {
   if(message.content === 'hb!업타임') {
-  message.channel.send(client.uptime)
+  const embed = new Discord.RichEmbed
+  .setTitle('업타임')
+  // Set the color of the embed
+  .setColor(0xff0000)
+  // Set the main content of the embed
+  .setDescription(`${client.uptime}초`);
+// Send the embed to the same channel as the message
+message.channel.send(embed);
   }
 });
   client.login(token);

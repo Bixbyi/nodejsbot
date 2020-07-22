@@ -33,4 +33,13 @@ client.on('message', (message) => {
   )
   }
 });
+client.on('message', (message) => {
+  if(message.content === '`임베드')
+  let embed = new Discord.RichEmbed()
+  .setColor = ('#000000')
+  .setField = ('유저 아이디',message.author.id)
+  .setField = ('유저 이름',message.author.username)
+  message.channel.send(embed)
+}
+);
 client.login(token);

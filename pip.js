@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 client.on('message', (message) => {
   if(message.content === 'hb!핑') {
-    message.channel.send(`현재 빅스비시의 풍속은${client.ping}입니다`);
+    message.channel.send(`현재 빅스비시의 풍속은 ${client.ping}ms 입니다`);
   }
 });
 client.on('message', (message) => {

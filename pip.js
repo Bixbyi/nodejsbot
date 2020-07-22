@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const asnycio = require('asyncio')
 const client = new Discord.Client();
-const token = 'NzI1NTgzMDU5NjU0NjcyNDE1.XxgjXA.iOsmiz8uVkZTlH-2i0x3xXtGWEM'
+const token = process.env.token
 client.on('ready', () => {
   console.log(`로그인: ${client.pings}`);
 });

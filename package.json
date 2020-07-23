@@ -8,7 +8,7 @@
   "dependencies": {
     "asyncio": "0.0.2",
     "axios": "^0.19.2",
-    "discord.js": "^11.5.1"
-
+    "discord.js": "^11.6.4",
+    "googletrans": "^1.0.0"
   }
 }

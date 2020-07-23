@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
-const asnycio = require('asyncio')
+const asnycio = require('asyncio');
+const googletrans = require('googletrans');
 const client = new Discord.Client();
 const token = process.env.token
 client.on('ready', () => {
@@ -34,7 +35,7 @@ client.on('message', (message) => {
   }
 });
 client.on('message', (message) => {
-  if(message.content === 'hb!업타임') {
+  if(message === 'hb!업타임') {
     let embed = new Discord.RichEmbed()
     .setColor('#0099ff')
     .setAuthor()
@@ -43,4 +44,12 @@ client.on('message', (message) => {
   message.channel.send(embed)
   }
 });
-  client.login(token);
+client.on('message',(message) => {
+  if(message === 'hb!번역') {
+    translator = translator()
+    msg = message.content[8]
+    result = translator.translate(msg, dest='en')
+  message.channel.send(result)
+  }
+});
+client.login(token);

@@ -36,12 +36,7 @@ client.on('message', (message) => {
 });
 client.on('message', (message) => {
   if(message === 'hb!업타임') {
-    let embed = new Discord.RichEmbed()
-    .setColor('#0099ff')
-    .setAuthor()
-    .addField('업타임',`${client.uptime} 초입니다`)
-    .setTimestamp()
-  message.channel.send(embed)
+  message.channel.send(floor(client.uptime/60)+'초 동안 실행되.. 었읍니.. 으억..')
   }
 });
 client.login(token);

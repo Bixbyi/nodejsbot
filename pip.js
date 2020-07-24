@@ -44,12 +44,4 @@ client.on('message', (message) => {
   message.channel.send(embed)
   }
 });
-client.on('message',(message) => {
-  if(message === 'hb!번역') {
-    translator = translator()
-    msg = message.content[8]
-    result = translator.translate(msg, dest='en')
-  message.channel.send(result)
-  }
-});
 client.login(token);
